@@ -12,7 +12,7 @@ monaco editor + antlr + react
 <li>add 1 file:---> SalamGrammar.g4</li>
 <li>npm add antlr4ts</li>
 <li>npm add -D antlr4ts-cli</li>
-  <li>change package.json--------> add scrpts: "antlr4ts": "antlr4ts ./SalamGrammar.g4 -o ./src/ANTLR"</li>
+  <li>change package.json--------> add to scripts: "antlr4ts": "antlr4ts ./SalamGrammar.g4 -o ./src/ANTLR"</li>
 <li>npm run antlr4ts</li>
   <li>add 3 files: SalamErrorListener, SalamChichiListener, parser</li>
   <li>change App.js</li>
