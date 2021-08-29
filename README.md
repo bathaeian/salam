@@ -6,7 +6,7 @@ monaco editor + antlr + react
   <li>install nodejs</li>
   <li>copy the project in a folder</li>
 <li>run these commands in that folder</li>
-<li>npx create-react-app salamha-tsx --typescript</li>
+<li>npx create-react-app salam -tsx --typescript</li>
 <li>//Adding TypeScript to existing create-react-app project------>  npm install --save typescript @types/node @types/react @types/react-dom @types/jest</li>
 <li>npm install @monaco-editor/react</li>
 <li>add 1 file:---> SalamGrammar.g4</li>
