@@ -18,7 +18,7 @@ function parse(code: string): {ast:GContext, errors: ISalamError[],chi:string} {
     parser.removeErrorListeners();
     parser.addErrorListener(salamErrorsListener);
     const ast =  parser.g();
-    const errors:ISalamError[]  = salamErrorsListener.getErrors();;
+    const errors:ISalamError[]  = salamErrorsListener.getErrors();
     const chichi: SalamChichiListener = new SalamChichiListener();
     // Use the entry point for listeners
     ParseTreeWalker.DEFAULT.walk(chichi as SalamGrammarListener, ast);
@@ -29,9 +29,13 @@ export function parseAndGetASTRoot(code: string): GContext {
     const {ast} = parse(code);
     return ast;
 }
-export function parseAndGetSyntaxErrors(code: string): ISalamError[] {
+export function parseAndGetSyntaxErrors(code: string):string{// ISalamError[] {
     const {errors} = parse(code);
-    return errors;
+    let s:string;
+    if(errors.length>0)
+        s=errors[0].message;
+    else s="no error";
+    return s;
 }
 export function parseAndGetChichi(code: string): string {
     const {chi} = parse(code);

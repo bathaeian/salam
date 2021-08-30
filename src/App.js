@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 //import ReactDOM from "react-dom";
-import {parseAndGetChichi} from "./parser";
+import {parseAndGetChichi,parseAndGetSyntaxErrors} from "./parser";
 import Editor from "@monaco-editor/react";
 
 function App() {
@@ -11,10 +11,12 @@ function App() {
   }
   
   function showValue() {
-    let s=parseAndGetChichi(editorRef.current.getValue());
+    let s=parseAndGetSyntaxErrors(editorRef.current.getValue());
+    if(s==="no error")  s=parseAndGetChichi(editorRef.current.getValue());
     alert(s);
     document.getElementById('result').innerHTML = s;
   }
+  
 
   return (
    <>
@@ -22,7 +24,8 @@ function App() {
      <Editor
        height="50vh"
        defaultLanguage="salam"
-       defaultValue="Salam Narges!"
+       defaultValue="Salam narges!"
+       theme='vs-dark'
        onMount={handleEditorDidMount}
      />
      <div id="result">
