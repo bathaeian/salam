@@ -7,8 +7,8 @@ monaco editor + antlr + react + listener
   <li>copy the project in a folder</li>
 <li>run these commands in that folder</li>
 <li>npx create-react-app salam -tsx --typescript</li>
+  <li> go to created folder </li>
 <li>//Adding TypeScript to existing create-react-app project------>  npm install --save typescript @types/node @types/react @types/react-dom @types/jest</li>
-  <li> go to created folder 
 <li>npm install @monaco-editor/react</li>
 <li>add 1 file:---> SalamGrammar.g4</li>
 <li>npm add antlr4ts</li>
