@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 //import ReactDOM from "react-dom";
-import {parseAndGetChichi,parseAndGetSyntaxErrors} from "./parser";
+import {parseAndGetChichi,parseAndGetSyntaxErrors} from "./parser.ts";
 import Editor from "@monaco-editor/react";
 
 function App() {
