@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 //import ReactDOM from "react-dom";
-import {parseAndGetChichi,parseAndGetSyntaxErrors} from "./parser.ts";
+import {parseAndGetChichi,parseAndGetSyntaxErrors,y2salams} from "./parser.ts";
 import Editor from "@monaco-editor/react";
 
 function App() {
@@ -16,12 +16,16 @@ function App() {
     alert(s);
     document.getElementById('result').innerHTML = s;
   }
-  
+  function y2salam() {
+    let s=y2salams();
+    document.getElementById('result').innerHTML = s;
+  }
 
   return (
    <>
      <button onClick={showValue}>Compile and Run</button>
-     <Editor
+     <button onClick={y2salam}>Good morning</button>
+    <Editor
        height="50vh"
        defaultLanguage="salam"
        defaultValue="Salam narges!"
@@ -36,3 +40,4 @@ function App() {
 }
 
 export default App;
+
